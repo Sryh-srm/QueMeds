@@ -1,5 +1,6 @@
 # Hybrid Quantum-Classical Disease Predictor
 
+
 A complete prototype that predicts heart disease risk using a **stacked hybrid quantum committee** (Quantum Kernel SVM + bagged VQC ensemble + single VQC + tuned classical SVM and Logistic Regression, combined by an out-of-fold meta-learner), with the Quantum Kernel SVM as the flagship pure-quantum model. Preprocessing: imputation, scaling, supervised ANOVA feature selection, and angle scaling for quantum encoding. The system includes a QML frontend for data entry, a FastAPI backend for serving predictions, and a training script that compares quantum vs classical models.
 
 Datasets: **Cleveland primary** — 303 patients in `data/heart.csv` (official headline split: 242 train / 61 test, `random_state=42`). **Combined expansion** — 918 real patients in `data/heart_combined.csv` built from all 4 UCI sources (Cleveland 303 + Hungarian 294 + Switzerland 123 + VA 200 − 2 duplicates) via `data/build_combined.py`; see `data/DATASET_PROVENANCE.md`. The Cleveland file is never overwritten.
@@ -296,6 +297,7 @@ Verified live in 2-3 min: `scripts/verify_accuracy.py` PASS 52/61 + 8/8 clinical
 
 **Q4 Why not push to 87-88%?**
 `n=61` -> one patient = 1.64 pp; mean over random splits is ~80% +-2.5% (`AUDIT.md` P4). 85.25% -> 86.88% is literally 52/61 -> 53/61. Leakage-free 87-88% via OOF expansion (`scripts/push_accuracy.py`, fresh per-fold quantum, 25 min) is possible but still within noise and dilutes quantum signal. Honest headline is tied 85.25% (Cleveland) + tied 79.89% @4 qubits (918) / 84.78% tied ceiling @13.
+we use UCI data 
 
 ## Troubleshooting
 
