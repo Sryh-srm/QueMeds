@@ -14,3 +14,4 @@ matplotlib==3.8.2
 httpx==0.25.2  # only needed for FastAPI TestClient (tests)
 python-multipart==0.0.6  # CSV upload endpoint (/predict/csv)
 PyQt5==5.15.9  # runs the QML frontend via frontend/run_ui.py (no Qt install needed)
+autoray==0.6.11
