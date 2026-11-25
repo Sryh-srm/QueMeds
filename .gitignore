@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+**/venv/
+env/
+# Regenerable outputs — NOTE: backend/artifacts/ is intentionally kept
+# out of this list so the trained models ship with the project and it
+# runs out of the box without retraining.
+plots/
+data/heart.csv
+
+# OS / editor noise
+.DS_Store
+*.log
+
+.freebuff/
+.vscode/
+
+# Keep combined dataset (real UCI patients, not regenerable offline)
+!data/heart_combined.csv
+!data/DATASET_PROVENANCE.md
+!data/build_combined.py
+!docs/breast_benchmark.log
+
+response.txt
+frontend/response.txt
+env/
+issues/
+venv311/
+# Internal audit and recovery notes
+deployment_audit_report.md
+fixes.md
+recovery_steps.md
+response.txt
+
+# Local helper and recovery scripts
+git_status.bat
+run_all_recovery.ps1
+run_frontend_build.bat
+run_git_check.bat
+run_git_status.py
+run_inspect.bat
+run_recovery.bat
+run_verify.py
+
+# Internal artifact inspection
+inspect_artifacts.py
