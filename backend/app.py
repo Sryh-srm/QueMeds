@@ -39,7 +39,7 @@ from .preprocess import load_preprocessor, transform_preprocessor, FEATURES
 from .quantum_model import QuantumModel, QuantumEnsemble, QuantumKernelClassifier
 
 # CORS configuration via environment variable
-CORS_ORIGINS = os.getenv("CORS_ORIGINS", "http://localhost:5173,http://localhost:3000,https://disease-prediction-davo9kxd9-quantedge-sryh-srm.vercel.app").split(",")
+CORS_ORIGINS = os.getenv("CORS_ORIGINS", "http://localhost:5173,http://localhost:3000,https://que-meds.vercel.app/").split(",")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
