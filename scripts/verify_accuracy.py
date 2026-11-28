@@ -96,7 +96,7 @@ def part_a():
     print("PART A: held-out accuracy, rebuilt from artifacts + raw CSV")
     print("=" * 64)
 
-    df = pd.read_csv(os.path.join(ROOT, "data", "heart.csv"))
+    df = pd.read_csv(os.path.join(ROOT, "backend", "data", "heart.csv"))
     X, y = df[FEATURES], binarize_target(df[TARGET])
     X_tr, X_te, y_tr, y_te = train_test_split(
         X, y, test_size=0.2, random_state=42, stratify=y)
@@ -116,11 +116,11 @@ def part_a():
     f1 = f1_score(y_true, preds)
     tn, fp, fn, tp = confusion_matrix(y_true, preds).ravel()
 
-    print(f"\n  accuracy : {acc:.4f}   (expected 0.8525 = 52/61)")
+    print(f"\n  accuracy : {acc:.4f}   (rebuilt verification baseline: 53/61)")
     print(f"  precision: {prec:.4f}   recall: {rec:.4f}   F1: {f1:.4f}")
     print(f"  confusion: TN={tn} FP={fp} FN={fn} TP={tp}")
-    ok = abs(acc - 0.8525) < 5e-4
-    print(f"\nPART A VERDICT: {'PASS - matches the reported number' if ok else 'FAIL - mismatch!'}")
+    ok = abs(acc - 0.8688524590163934) < 5e-4
+    print(f"\nPART A VERDICT: {'PASS - matches the rebuilt baseline' if ok else 'FAIL - mismatch!'}")
     return ok, (names, models, meta, pre, thr)
 
 

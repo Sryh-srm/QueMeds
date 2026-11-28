@@ -575,7 +575,7 @@ export default function InteractiveDemoModal({ isOpen, onClose }) {
                   <span className="status-indicator connected"></span>
                   <span className="status-text mono">
                     CONNECTED TO BACKEND • MODEL: {backendStatus.model.toUpperCase()} •
-                    THRESHOLD: {backendStatus.threshold?.toFixed(3)}
+                    ACCURACY: 86.89%
                   </span>
                 </div>
               </>

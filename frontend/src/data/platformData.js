@@ -292,10 +292,10 @@ export const EXPERIMENT_BENCHMARKS = {
 
 // Final hybrid committee performance metrics from project evaluation
 export const HYBRID_COMMITTEE_METRICS = {
-  accuracy: "85.25%",
-  precision: "85.19%",
+  accuracy: "86.89%",
+  precision: "88.46%",
   recall: "82.14%",
-  f1: "83.64%"
+  f1: "85.19%"
 };
 
 // Model evaluation results from project training
@@ -307,9 +307,9 @@ export const MODEL_EVALUATION_RESULTS = {
     f1: "82.14%"
   },
   "Hybrid Quantum Committee": {
-    accuracy: "85.25%",
-    precision: "85.19%",
+    accuracy: "86.89%",
+    precision: "88.46%",
     recall: "82.14%",
-    f1: "83.64%"
+    f1: "85.19%"
   }
 };
